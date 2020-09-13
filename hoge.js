@@ -1,8 +1,10 @@
-$(function(){
-	let $hoge = $('.hoge');
-	$hoge.ripples({
-		resolution: 400,
-		dropRadius: 40,
-		perturbance: 0.09
-	});
+$(function() {
+  let $hoge = $(".hoge");
+  $hoge.ripples({
+    dropRadius: 20,
+    perturbance: 0.03,
+    resolution: 256,
+    interactive: true,
+    crossOrigin: ""
+  });
 });
