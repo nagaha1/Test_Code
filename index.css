@@ -3,3 +3,40 @@
   height: 500px;
   background: url("https://images.unsplash.com/photo-1502646434673-f914c2b11728?auto=format&fit=crop&w=2550&q=80");
 }
+
+.text-test {
+  position: relative;
+  text-align: center;
+  color: #ccc;
+}
+
+.text-test::after {
+  content: attr(data-txt);
+  position: absolute;
+  color: #1a1e24;
+  clip: rect(0, 0, 100px, 0);
+  transition: clip 1.5s linear;
+}
+
+.text-test:hover::after {
+  clip: rect(0px, 300px, 100px, 0);
+}
+
+/* 文字が反映される処理を追加したい
+.text-test {
+  position: relative;
+  text-align: center;
+  color: #ccc;
+}
+
+.text-test::after {
+  content: attr(data-txt);
+  position: absolute;
+  color: #1a1e24;
+  clip: rect(0, 0, 100px, 0);
+  transition: clip 1.5s linear;
+}
+
+.text-test:hover::after {
+  clip: rect(0px, 300px, 100px, 0);
+} */
