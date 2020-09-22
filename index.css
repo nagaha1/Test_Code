@@ -53,3 +53,95 @@
 .text-test:hover::after {
   clip: rect(0px, 300px, 100px, 0);
 } */
+
+#container:hover a:not(:hover) {
+  transform: scale(0.5);
+}
+
+.button,
+.result {
+  width: 200px;
+  height: 100px;
+  padding: 20px 0;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  background: #66b6d5;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+/* 
+.button:hover + .button + .result {
+  background: #e72458;
+} */
+/* 
+.tes:hover > div {
+  background: #e72458;
+} */
+
+/* ----------------- */
+.parent:hover > div {
+  opacity: 0.5;
+}
+
+/* .parent:hover > div:hover {
+  opacity: 1;
+} */
+
+/* 普通にhover */
+/* .button:hover + .result {
+  background: #d56678;
+} */
+
+/* .button:hover,
+.result:hover {
+  background: #d56678;
+} */
+
+.result:hover + .button {
+  background: #d56678;
+}
+
+/* 行いた事が、複数要素をhoverしたら処理がながれる。をやりたい。
+とするとjsでつくったほうが良いと思う。しらべるだけ */
+
+.result {
+  cursor: pointer;
+}
+
+/* カーソルの実装 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  cursor: none;
+}
+
+.cursor,
+.follower {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: none;
+  pointer-events: none;
+}
+
+.cursor {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  z-index: 1001;
+}
+
+.follower {
+  width: 40px;
+  height: 40px;
+  background-color: #fdfe00;
+  z-index: 1000;
+}
